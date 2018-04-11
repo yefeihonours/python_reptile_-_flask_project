@@ -90,7 +90,7 @@ def get_data(html_text):
         for var in wind:
             w += (var.get('title')+' ')
         temp.append(w)  #   将风向添加到temp中
-        speed = inf[2].find('i').string.replace('<', '')
+        speed = inf[2].find('i').string
         temp.append(speed)  #   将风速添加到temp中
         final.append(temp)   #  将temp加到final中
 
