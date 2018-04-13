@@ -7,7 +7,7 @@ from wtforms import StringField, SubmitField
 from wtforms.validators import Required 
  
 from city_code_xml_parse import get_city_code
-from weather_reptile import weather_data
+from weather_reptile import get_weather_data
 
 class NameForm(Form): 
     name = StringField('请输入待查询天气的城市', validators=[Required()]) 
@@ -33,7 +33,7 @@ def index():
         else: 
             name = '北京'
         city_code = city_dict.get(name)
-        weather = weather_data(city_code)
+        weather = get_weather_data(city_code)
         weather = weather[1]
         return render_template('index.html', form = form, name = name, weather = " ".join('%s'%id for id in weather))
 

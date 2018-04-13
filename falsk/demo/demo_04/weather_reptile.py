@@ -1,7 +1,6 @@
 # coding : UTF-8
 
 import requests #用来抓取网页的html源代码
-import csv  #将数据写入到csv文件中
 import random   #取随机数
 import time #时间相关操作 
 import socket   #
@@ -102,7 +101,7 @@ def get_data(html_text):
 '''
 程序入口:
 '''
-def weather_data(city_code):
+def get_weather_data(city_code):
     city_code = city_code   # 接受指定城市的城市代码
     url ='http://www.weather.com.cn/weather/{}.shtml'.format(city_code)    # 中国天气网指定代码城市的天气信息地址
     html = get_content(url)
