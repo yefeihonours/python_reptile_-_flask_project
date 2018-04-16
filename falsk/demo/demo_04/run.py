@@ -28,7 +28,7 @@ def index():
             flash('请输入正确的中国城市名！')
             return redirect(url_for('index')) 
     else:
-        if session.get('name')!='': 
+        if 'name' in session: 
             name = session.get('name') 
         else: 
             name = '北京'
