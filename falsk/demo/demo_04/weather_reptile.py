@@ -86,7 +86,7 @@ def get_data(html_text):
         temp.append(speed)  #   将风速添加到temp中
         final.append(temp)   #  将temp加到final中
 
-    return final    #   final列表包含了所有要写入csv文件的数据
+    return final    #   final列表包含了所有要展示的数据
 
 '''
 获取html中我们所需要的字段
